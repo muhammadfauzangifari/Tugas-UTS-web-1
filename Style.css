@@ -1,0 +1,239 @@
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+button {
+      background-color: #2a5298;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: auto; 
+    }
+
+/* ====== Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff9800;
+  color: #fff;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #222;
+}
+
+.auth a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.auth a.login {
+  background: #fff;
+  color: #ff9800;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 152, 0, 0.9);
+  color: #fff;
+  padding: 60px 80px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.hero-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-text button {
+  padding: 10px 25px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-text button:hover {
+  background: #333;
+}
+
+.hero-img img {
+  width: 380px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* ====== Books Section ====== */
+.books {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.books h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.books p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 200px;
+  padding: 15px;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9800;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.book-card h4 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.book-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+}
+
+.book-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+body {
+  background-image: url("Img/bookstore.jpg");
+  background-size: cover;         /* agar gambar menyesuaikan layar */
+  background-position: center;    /* puosisikan di tengah */
+  background-repeat: no-repeat;   /* jangan diulang */
+  background-attachment: fixed;   /* tetap diam saat discroll */
+}

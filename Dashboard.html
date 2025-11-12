@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Cakrawala Book</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #ff8c00; /* Warna oranye cerah */
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      padding: 20px 0;
+      margin: 0;
+      background-color: #e07b00;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #f9a825;
+    }
+
+    /* Bagian konten utama */
+    .main-content {
+      margin-left: 240px;
+      padding: 30px;
+      width: calc(100% - 240px);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 22px;
+      color: #333;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 230px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #ff8c00;
+      margin-bottom: 10px;
+    }
+
+    .chart {
+      margin-top: 40px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    /* Tombol */
+    .btn {
+      background-color: #ff8c00;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e07b00;
+    }
+
+    body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    /* tambahkan ini 👇 */
+    background-image: url("Img/bookstore.jpg");
+    background-size: cover;         /* agar menutupi seluruh layar */
+    background-repeat: no-repeat;   /* supaya tidak diulang */
+    background-position: center;    /* posisi tengah */
+    color: #0c0c0c;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Cakrawala Book</h2>
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="stok.html">📚 Stok Buku</a>
+    <a href="checkout.html">🛒 Pemesanan</a>
+    <a href="tracking.html">🚚 Tracking</a>
+    <a href="#">📈 Laporan</a>
+    <a href="login.html">🔒 Logout</a>
+  </div>
+
+  <!-- Konten utama -->
+  <div class="main-content">
+    <div class="header">
+      <h1>Selamat Datang di Dashboard</h1>
+      <button class="btn">Tambah Buku</button>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Jumlah Buku</h3>
+        <p><strong>5</strong> total buku tersedia</p>
+      </div>
+      <div class="card">
+        <h3>Transaksi Hari Ini</h3>
+        <p><strong>0</strong> pemesanan baru</p>
+      </div>
+      <div class="card">
+        <h3>Total Penjualan</h3>
+        <p><strong>Rp 0</strong> bulan ini</p>
+      </div>
+      <div class="card">
+        <h3>Pengguna Aktif</h3>
+        <p><strong>0</strong> pelanggan terdaftar</p>
+      </div>
+    </div>
+
+    <div class="chart">
+      <h3>Statistik Penjualan</h3>
+      <img src="img/chart-example.png" alt="Grafik Penjualan" style="width:100%; border-radius:8px;">
+    </div>
+
+    <div class="footer">
+      © 2025 Cakrawala Book. All Rights Reserved.
+    </div>
+  </div>
+
+</body>
+</html>

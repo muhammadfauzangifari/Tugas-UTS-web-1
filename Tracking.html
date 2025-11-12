@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Pengiriman</title>
+  <style>
+    body {
+  background-image: url("Img/bookstore.jpg");
+  background-size: cover;         /* agar gambar menyesuaikan layar */
+  background-position: center;    /* posisikan di tengah */
+  background-repeat: no-repeat;   /* jangan diulang */
+  background-attachment: fixed;   /* tetap diam saat discroll */
+}
+
+    .tracking-container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .tracking-input {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #ffce00;
+      color: #222;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffd633;
+      transform: scale(1.05);
+    }
+
+    .tracking-status {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 25px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .status-step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .status-circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #ffce00;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .status-text {
+      font-size: 16px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      text-align: center;
+      color: #eee;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tracking-container">
+    <h2>📦 Tracking Pengiriman</h2>
+    <div class="tracking-input">
+      <input type="text" id="resi" placeholder="Masukkan nomor resi...">
+      <br><a href="Checkout.html"><button>Beli</button></a></br>
+    </div>
+
+    <div id="hasilTracking"></div>
+  </div>
+
+  <footer>© 2025 Cakrawala Book - all rights reserved</footer>
+
+  <script>
+    function cekResi() {
+      const resi = document.getElementById('resi').value.trim();
+      const hasil = document.getElementById('hasilTracking');
+
+      if (resi === "") {
+        hasil.innerHTML = "<p style='text-align:center;color:#ffce00;'>⚠️ Masukkan nomor resi terlebih dahulu!</p>";
+        return;
+      }
+
+      hasil.innerHTML = `
+        <div class="tracking-status">
+          <div class="status-step">
+            <div class="status-circle"></div>
+            <div class="status-text">Pesanan diterima dan sedang diproses di gudang.</div>
+          </div>
+          <div class="status-step">
+            <div class="status-circle"></div>
+            <div class="status-text">Pesanan telah dikirim melalui kurir ekspedisi.</div>
+          </div>
+          <div class="status-step">
+            <div class="status-circle"></div>
+            <div class="status-text">Pesanan dalam perjalanan menuju alamat tujuan.</div>
+          </div>
+          <div class="status-step">
+            <div class="status-circle"></div>
+            <div class="status-text">Pesanan berhasil diterima oleh pelanggan 🎉.</div>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

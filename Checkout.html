@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Toko Buku Online</title>
+  <style>
+    body {
+  background-image: url("Img/bookstore.jpg");
+  background-size: cover;         /* agar gambar menyesuaikan layar */
+  background-position: center;    /* puosisikan di tengah */
+  background-repeat: no-repeat;   /* jangan diulang */
+  background-attachment: fixed;   /* tetap diam saat discroll */
+}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .checkout-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2a5298;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .order-summary {
+      background-color: #f1f3f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .order-summary h3 {
+      margin-bottom: 10px;
+      color: #2a5298;
+    }
+
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #2a5298;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #1e3c72;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+    }
+
+    /* Responsif untuk HP */
+    @media (max-width: 600px) {
+      .checkout-container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="checkout-container">
+    <h2>🛒 Checkout Pesanan Anda</h2>
+
+    <!-- Ringkasan Pesanan -->
+    <div class="order-summary">
+      <h3>Ringkasan Pesanan</h3>
+      <div class="order-item">
+        <span>1. Aplikasi Komputer</span>
+        <span>Rp75.000</span>
+      </div>
+      <div class="order-item">
+        <span>2. Jaringan Komputer</span>
+        <span>Rp80.000</span>
+      </div>
+      <div class="total">Total: Rp155.000</div>
+    </div>
+
+    <!-- Form Data Pembeli -->
+    <div class="form-group">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda">
+    </div>
+
+    <div class="form-group">
+      <label for="alamat">Alamat Pengiriman</label>
+      <textarea id="alamat" rows="3" placeholder="Masukkan alamat lengkap Anda"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="nohp">Nomor Telepon</label>
+      <input type="text" id="nohp" placeholder="08xxxxxxxxxx">
+    </div>
+
+    <div class="form-group">
+      <label for="metode">Metode Pembayaran</label>
+      <select id="metode">
+        <option value="">-- Pilih Metode Pembayaran --</option>
+        <option>Bank Central Asia</option>
+        <option>Bank Rakyat Indonesia</option>
+        <option>Bank Negara Indonesia</option>
+        <option>Bank Mandiri</option>
+        <option>COD (Bayar di Tempat)</option>
+        <option>QRIS</option>
+        <option>OVO</option>
+      </select>
+    </div>
+
+    <button onclick="kirimPesanan()">Konfirmasi Pesanan</button>
+
+    <p id="konfirmasi" style="text-align:center; margin-top:20px; color:green; font-weight:bold;"></p>
+  </div>
+
+  <footer>© 2025 Cakrawala books | All rights reserved</footer>
+
+  <script>
+    function kirimPesanan() {
+      const nama = document.getElementById("nama").value.trim();
+      const alamat = document.getElementById("alamat").value.trim();
+      const nohp = document.getElementById("nohp").value.trim();
+      const metode = document.getElementById("metode").value;
+
+      if (nama === "" || alamat === "" || nohp === "" || metode === "") {
+        document.getElementById("konfirmasi").style.color = "red";
+        document.getElementById("konfirmasi").innerText = "⚠️ Mohon lengkapi semua data sebelum melanjutkan!";
+      } else {
+        document.getElementById("konfirmasi").style.color = "green";
+        document.getElementById("konfirmasi").innerText = "✅ Pesanan berhasil dikonfirmasi! Terima kasih telah berbelanja.";
+      }
+    }
+  </script>
+
+</body>
+</html>
